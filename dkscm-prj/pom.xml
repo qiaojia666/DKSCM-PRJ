@@ -8,7 +8,79 @@
 	  <modules>
 	  	<module>dkscm-commons</module>
 	  	<module>dkscm-service</module>
-    <module>dkscm</module>
-    <module>dkscm-shiro</module>
-  </modules>
+    	<module>dkscm</module>
+    	<module>dkscm-shiro</module>
+  	  </modules>
+  	  <properties>
+  	  	<spring.version>5.2.0.RELEASE</spring.version>
+	    <mysql.connector.java>8.0.18</mysql.connector.java>
+	    <mybatis.version>3.5.3</mybatis.version>
+	    <mybatis.spring.version>2.0.3</mybatis.spring.version>
+	    <druid.version>1.1.21</druid.version>
+	    <jackson.databind.version>2.10.1</jackson.databind.version>
+	  	<shiro.spring.version>1.4.1</shiro.spring.version>
+	  	<jstl.version>1.2</jstl.version>
+  	  </properties>
+  	  <dependencies>
+  	  	<!-- 配置springmvc所需要的依赖关系 -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-webmvc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+	    <!-- 引入spring JDBC所需要的依赖关系 -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+	    <!-- 引入mysql连接驱动序所需要的依赖关系 -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>${mysql.connector.java}</version>
+		</dependency>
+	    <!-- 引入mybatis 以及mybatis和spring结合的依赖关系 -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>${mybatis.spring.version}</version>
+		</dependency>
+	    <!-- 引入Druid数据源的依赖关系 -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>druid</artifactId>
+		    <version>${druid.version}</version>
+		</dependency>
+	    <!-- 引入Jackson对json数据格式化的依赖关系 -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>${jackson.databind.version}</version>
+		</dependency>
+	    <!-- 引入JSTL的依赖关系 -->
+		<dependency>
+		    <groupId>jstl</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>${jstl.version}</version>
+		</dependency>
+	    <!-- 引入servlet和jsp的依赖关系 -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.1.0</version>
+		    <scope>provided</scope>
+		</dependency>
+	    <dependency>
+		    <groupId>javax.servlet.jsp</groupId>
+		    <artifactId>javax.servlet.jsp-api</artifactId>
+		    <version>2.3.3</version>
+		    <scope>provided</scope>
+		</dependency>
+  	  </dependencies>
 </project>
